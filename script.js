@@ -35,12 +35,12 @@ function displayResult(result) {
     let temperature = document.querySelector('#temperature');
     temperature.innerHTML = `${Math.round(result.main.temp)}<span>°</span>`;
     
-    let feelsLike = document.querySelector('#feelsLike');
-    feelsLike.innerHTML = "Feel like: " + `${Math.round(result.main.feels_like)}<span>°</span>`;
-    
     let conditions = document.querySelector('#conditions');
     conditions.textContent = `${result.weather[0].main}`;
     
+    let feelsLike = document.querySelector('#feelsLike');
+    feelsLike.innerHTML = "Feel like: " + `${Math.round(result.main.feels_like)}<span>°</span>`;
+   
     let variation = document.querySelector('#variation');
     variation.innerHTML = "Min: " + `${Math.round(result.main.temp_min)}<span>°</span>` + " Max: " + `${Math.round(result.main.temp_max)}<span>°</span>`;
 }
